@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.presentation.main_screen.adapters
+package com.aleisder.ecommerceapp.presentation.store_screen.adapters
 
 import android.view.LayoutInflater
 import android.view.View

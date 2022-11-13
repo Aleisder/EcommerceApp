@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.presentation.main_screen
+package com.aleisder.ecommerceapp.presentation.store_screen
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,14 +6,13 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.aleisder.ecommerceapp.presentation.main_screen.adapters.HotSalesAdapter
+import com.aleisder.ecommerceapp.presentation.store_screen.adapters.BestSellerAdapter
+import com.aleisder.ecommerceapp.presentation.store_screen.adapters.HotSalesAdapter
 import com.example.ecommerceapp.databinding.FragmentMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
-private const val TAG = "MainFragment"
-
 @AndroidEntryPoint
-class MainFragment: Fragment() {
+class StoreFragment: Fragment() {
 
     private var _binding: FragmentMainBinding? = null
     private val binding get() = _binding!!
@@ -34,11 +33,19 @@ class MainFragment: Fragment() {
         super.onViewCreated(view, savedInstanceState)
 
         mainViewModel.phonesOnMain.observe(viewLifecycleOwner) {
+
             binding.rvHotSalesList.apply {
                 adapter = HotSalesAdapter(it.home_store)
                 setHasFixedSize(true)
             }
+
+            binding.rvBestSellerGrid.apply {
+                adapter = BestSellerAdapter(it.best_seller)
+                setHasFixedSize(true)
+            }
         }
+
+
 
     }
 

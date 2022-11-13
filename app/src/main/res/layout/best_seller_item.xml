@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.cardview.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    app:cardCornerRadius="10dp"
+    app:cardElevation="10dp"
+    android:layout_margin="5dp"
+    android:layout_width="181dp"
+    android:layout_height="227dp">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.google.android.material.imageview.ShapeableImageView
+            android:id="@+id/iv_phone_picture"
+            android:layout_width="match_parent"
+            android:layout_height="168dp"
+            android:src="@drawable/samsung"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:layout_marginStart="12dp"
+            android:id="@+id/tv_price_with_discount"
+            android:layout_width="wrap_content"
+            android:textColor="@color/dark_blue"
+            android:textSize="18sp"
+            android:fontFamily="@font/mark_pro"
+            android:textFontWeight="700"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toTopOf="@+id/tv_title"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/iv_phone_picture"
+            tools:text="$1000" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_price_without_discount"
+            android:layout_width="wrap_content"
+            android:textColor="@color/light_grey"
+            android:layout_height="wrap_content"
+            android:textSize="14sp"
+            android:fontFamily="@font/mark_pro"
+            android:textFontWeight="500"
+            android:background="@drawable/cross_line"
+            app:layout_constraintStart_toEndOf="@id/tv_price_with_discount"
+            android:layout_marginStart="12dp"
+            app:layout_constraintBottom_toBottomOf="@id/tv_price_with_discount"
+            tools:text="$1500" />
+
+        <com.google.android.material.textview.MaterialTextView
+            android:id="@+id/tv_title"
+            android:fontFamily="@font/mark_pro"
+            android:textColor="@color/dark_blue"
+            android:textFontWeight="400"
+            android:textSize="12sp"
+            android:layout_marginStart="12dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tv_price_with_discount"
+            tools:text="Samsung Galaxy s20 Ultra" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</androidx.cardview.widget.CardView>

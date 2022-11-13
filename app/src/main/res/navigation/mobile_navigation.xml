@@ -3,23 +3,23 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/navigation_home">
+    app:startDestination="@+id/navigation_explorer">
 
     <fragment
-        android:id="@+id/navigation_home"
-        android:name="com.aleisder.ecommerceapp.presentation.main_screen.MainFragment"
-        android:label="@string/title_home"
+        android:id="@+id/navigation_explorer"
+        android:name="com.aleisder.ecommerceapp.presentation.store_screen.StoreFragment"
+        android:label="@string/title_explorer"
         tools:layout="@layout/fragment_main" />
 
     <fragment
-        android:id="@+id/navigation_dashboard"
+        android:id="@+id/navigation_basket"
         android:name="com.aleisder.ecommerceapp.ui.dashboard.DashboardFragment"
-        android:label="@string/title_dashboard"
+        android:label="@string/title_basket"
         tools:layout="@layout/fragment_dashboard" />
 
     <fragment
-        android:id="@+id/navigation_notifications"
+        android:id="@+id/navigation_favourite"
         android:name="com.aleisder.ecommerceapp.ui.notifications.NotificationsFragment"
-        android:label="@string/title_notifications"
+        android:label="@string/title_favourite"
         tools:layout="@layout/fragment_notifications" />
 </navigation>
