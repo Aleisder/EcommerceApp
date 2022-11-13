@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.data.mainscreen
+package com.aleisder.ecommerceapp.models.mainscreen
 
 data class BestSeller(
     val discount_price: Int,

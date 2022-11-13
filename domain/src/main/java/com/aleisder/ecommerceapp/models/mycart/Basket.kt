@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.data.mycart
+package com.aleisder.ecommerceapp.models.mycart
 
 data class Basket(
     val id: Int,

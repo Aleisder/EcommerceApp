@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.data.mainscreen
+package com.aleisder.ecommerceapp.models.mainscreen
 
 data class HomeStore(
     val id: Int,

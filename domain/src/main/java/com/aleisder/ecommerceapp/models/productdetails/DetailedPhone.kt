@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.data.productdetails
+package com.aleisder.ecommerceapp.models.productdetails
 
 data class DetailedPhone(
     val CPU: String,
