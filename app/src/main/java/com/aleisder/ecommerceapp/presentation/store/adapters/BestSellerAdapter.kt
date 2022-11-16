@@ -1,5 +1,7 @@
-package com.aleisder.ecommerceapp.presentation.store_screen.adapters
+package com.aleisder.ecommerceapp.presentation.store.adapters
 
+import android.content.Context
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -11,8 +13,11 @@ import com.aleisder.ecommerceapp.models.mainscreen.BestSeller
 import com.bumptech.glide.Glide
 import com.example.ecommerceapp.R
 
+private const val TAG = "BestSellerAdapter"
+
 class BestSellerAdapter(
-    private val bestSellers: List<BestSeller>
+    private val bestSellers: List<BestSeller>,
+    private val context: Context
 ) : RecyclerView.Adapter<BestSellerAdapter.BestSellerViewHolder>() {
 
     class BestSellerViewHolder(view: View) : RecyclerView.ViewHolder(view) {
@@ -26,16 +31,23 @@ class BestSellerAdapter(
         val adapterLayout = LayoutInflater
             .from(parent.context)
             .inflate(
-            R.layout.best_seller_item, parent, false)
+                R.layout.best_seller_item, parent, false
+            )
+        adapterLayout.setOnClickListener {
+            Log.d(TAG, "Done")
+        }
         return BestSellerViewHolder(adapterLayout)
     }
 
     override fun onBindViewHolder(holder: BestSellerViewHolder, position: Int) {
+        val bestSeller = bestSellers[position]
         holder.apply {
-            title.text = bestSellers[position].title
-            priceWithDiscount.text = bestSellers[position].discount_price.toString()
-            fullPrice.text = bestSellers[position].price_without_discount.toString()
-            Glide.with(picture).load(bestSellers[position].picture.toUri()).into(picture)
+            title.text = bestSeller.title
+            priceWithDiscount.text =
+                context.getString(R.string.cost, bestSeller.discount_price.toString())
+            fullPrice.text =
+                context.getString(R.string.cost, bestSeller.price_without_discount.toString())
+            Glide.with(picture).load(bestSeller.picture.toUri()).into(picture)
         }
     }
 

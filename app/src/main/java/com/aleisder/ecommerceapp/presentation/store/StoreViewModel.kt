@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.presentation.store_screen
+package com.aleisder.ecommerceapp.presentation.store
 
 import android.util.Log
 import androidx.lifecycle.LiveData

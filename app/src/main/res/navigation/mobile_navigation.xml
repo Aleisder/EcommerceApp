@@ -7,15 +7,15 @@
 
     <fragment
         android:id="@+id/navigation_explorer"
-        android:name="com.aleisder.ecommerceapp.presentation.store_screen.StoreFragment"
+        android:name="com.aleisder.ecommerceapp.presentation.store.StoreFragment"
         android:label="@string/title_explorer"
-        tools:layout="@layout/fragment_main" />
+        tools:layout="@layout/fragment_store" />
 
     <fragment
         android:id="@+id/navigation_basket"
-        android:name="com.aleisder.ecommerceapp.ui.dashboard.DashboardFragment"
+        android:name="com.aleisder.ecommerceapp.presentation.basket.BasketFragment"
         android:label="@string/title_basket"
-        tools:layout="@layout/fragment_dashboard" />
+        tools:layout="@layout/fragment_basket" />
 
     <fragment
         android:id="@+id/navigation_favourite"

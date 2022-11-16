@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp.presentation.store_screen
+package com.aleisder.ecommerceapp.presentation.store
 
 import android.os.Bundle
 import android.view.LayoutInflater
@@ -6,15 +6,15 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.ViewModelProvider
-import com.aleisder.ecommerceapp.presentation.store_screen.adapters.BestSellerAdapter
-import com.aleisder.ecommerceapp.presentation.store_screen.adapters.HotSalesAdapter
-import com.example.ecommerceapp.databinding.FragmentMainBinding
+import com.aleisder.ecommerceapp.presentation.store.adapters.BestSellerAdapter
+import com.aleisder.ecommerceapp.presentation.store.adapters.HotSalesAdapter
+import com.example.ecommerceapp.databinding.FragmentStoreBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint
 class StoreFragment: Fragment() {
 
-    private var _binding: FragmentMainBinding? = null
+    private var _binding: FragmentStoreBinding? = null
     private val binding get() = _binding!!
     private lateinit var mainViewModel: MainViewModel
 
@@ -25,7 +25,7 @@ class StoreFragment: Fragment() {
     ): View {
         mainViewModel = ViewModelProvider(this)[MainViewModel::class.java]
 
-        _binding = FragmentMainBinding.inflate(inflater, container, false)
+        _binding = FragmentStoreBinding.inflate(inflater, container, false)
         return binding.root
     }
 
@@ -40,7 +40,7 @@ class StoreFragment: Fragment() {
             }
 
             binding.rvBestSellerGrid.apply {
-                adapter = BestSellerAdapter(it.best_seller)
+                adapter = BestSellerAdapter(it.best_seller, requireContext())
                 setHasFixedSize(true)
             }
         }

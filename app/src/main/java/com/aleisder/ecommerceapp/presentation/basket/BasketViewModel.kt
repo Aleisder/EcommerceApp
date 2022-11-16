@@ -1,10 +1,10 @@
-package com.aleisder.ecommerceapp.ui.dashboard
+package com.aleisder.ecommerceapp.presentation.basket
 
 import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 
-class DashboardViewModel : ViewModel() {
+class BasketViewModel : ViewModel() {
 
     private val _text = MutableLiveData<String>().apply {
         value = "This is dashboard Fragment"
