@@ -6,6 +6,120 @@
     android:layout_height="match_parent"
     tools:context="com.aleisder.ecommerceapp.presentation.basket.BasketFragment">
 
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tv_my_cart"
+        style="@style/title_text_view"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/my_cart"
+        android:textSize="32sp"
+        android:layout_marginStart="42dp"
+        android:layout_marginTop="100dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:contentPadding="23dp"
+        app:cardBackgroundColor="@color/dark_blue"
+        app:cardCornerRadius="30dp"
+        app:layout_constraintTop_toBottomOf="@+id/tv_my_cart"
+        android:layout_marginTop="49dp"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                tools:listitem="@layout/basket_item"
+                tools:itemCount="2"
+                android:layout_marginBottom="15dp"
+                app:layout_constraintBottom_toTopOf="@+id/line"
+                app:layout_constraintTop_toTopOf="parent" />
+
+
+            <View
+                android:id="@+id/line"
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_marginBottom="20dp"
+                android:background="@color/purple"
+                app:layout_constraintBottom_toTopOf="@id/tv_title_total" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="12dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/total"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/tv_title_delivery"
+                app:layout_constraintStart_toStartOf="@+id/tv_title_delivery" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_title_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="20dp"
+                android:layout_marginBottom="50dp"
+                android:fontFamily="@font/mark_pro"
+                android:text="@string/delivery"
+                android:textColor="@color/white"
+                android:textSize="15sp"
+                app:layout_constraintBottom_toTopOf="@+id/btn_checkout"
+                app:layout_constraintStart_toStartOf="parent" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_total"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro"
+                android:layout_marginEnd="20dp"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_total"
+                tools:text="$6,000" />
+
+            <com.google.android.material.textview.MaterialTextView
+                android:id="@+id/tv_delivery"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/mark_pro"
+                android:textColor="@color/white"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:layout_constraintStart_toStartOf="@+id/tv_total"
+                app:layout_constraintTop_toTopOf="@+id/tv_title_delivery"
+                tools:text="Free" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_checkout"
+                android:layout_width="match_parent"
+                android:layout_height="62dp"
+                android:fontFamily="@font/mark_pro"
+                android:foregroundGravity="center_vertical"
+                android:text="@string/checkout"
+                android:textAllCaps="false"
+                android:textSize="22sp"
+                android:textStyle="bold"
+                app:cornerRadius="10dp"
+                app:layout_constraintBottom_toBottomOf="parent"
+                tools:layout_editor_absoluteX="15dp" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

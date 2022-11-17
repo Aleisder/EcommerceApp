@@ -1,4 +1,4 @@
-package com.aleisder.ecommerceapp
+package com.aleisder.ecommerceapp.util
 
 object Constants {
 

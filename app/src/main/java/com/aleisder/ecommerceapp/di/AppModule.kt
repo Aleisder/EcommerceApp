@@ -1,10 +1,9 @@
 package com.aleisder.ecommerceapp.di
 
-import com.aleisder.ecommerceapp.Constants
+import com.aleisder.ecommerceapp.util.Constants
 import com.aleisder.ecommerceapp.data.remote.EcommerceApi
 import com.aleisder.ecommerceapp.repository.EcommerceRepository
 import com.aleisder.ecommerceapp.data.remote.EcommerceRepositoryImpl
-import dagger.Component
 import dagger.Module
 import dagger.Provides
 import dagger.hilt.InstallIn

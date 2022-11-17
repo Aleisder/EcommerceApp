@@ -16,4 +16,10 @@
     <string name="title_features">Features</string>
     <string name="title_select_color">Select color and capacity</string>
     <string name="cost">$%s</string>
+    <string name="my_cart">My Cart</string>
+    <string name="checkout">Checkout</string>
+    <string name="delivery">Delivery</string>
+    <string name="total">Total</string>
+    <string name="minus">-</string>
+    <string name="plus">+</string>
 </resources>
